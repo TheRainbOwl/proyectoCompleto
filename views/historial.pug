@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Flor^3
+        link(rel="shortcut icon", href="/logos/flor.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/historial.css")
+        link(href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet")
+    body 
+        div(class="container container-Total md:mt-16")
+            div(class="historial p-4 rounded-xl")
+                div(class="table-Data p-1")
+                    table(class="table-auto border border-separate border-white-800 w-full")
+                        thead(class="table-header-group text-2xl")
+                            tr(class="table-row")
+                                th(class="table-cell border border-white-600") Flor  
+                                th(class="table-cell border border-white-600") Cantidad
+                                th(class="table-cell border border-white-600") Precio Total
+                                th(class="table-cell border border-white-600") Fecha
+                        tbody(class="table-body-group")
+                            - for(var i = 0; i < sizeHistorial; i++){
+                                tr(class="table-row")
+                                    th(class="table-cell border border-white-600") #{dataHistorial[i].Nombre}
+                                    th(class="table-cell border border-white-600") #{dataHistorial[i].cantidad}
+                                    th(class="table-cell border border-white-600") #{dataHistorial[i].price}
+                                    th(class="table-cell border border-white-600") #{dataHistorial[i].fecha}
+                            - }
+                div(class="mt-4")
+                    a(href="/consulta")
+                        button(class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded") REGRESAR USUARIO  
+                        

@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon", href="/logos/flor.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/compras.css")
+        link(href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet")
+        title Flor^3
+    body
+        div(class="container mx-auto")
+            div(class="principal flex md:flex-col md:my-32 p-9 md:rounded-lg shadow-2xl")
+                div(class="total_compra p-3 text-center md:rounded-lg")
+                    h1(class="font-sans md:font-sans text-4xl") Total de compra
+                div(class="container-table p-3 mt-4 md:rounded-lg")
+                    div(class="p-1") 
+                        table(class="table w-full ")
+                            thead(class="table-header-group text-2xl")
+                                tr(class="table-row")
+                                    th(class="table-cell") Flor 
+                                    th(class="table-cell") Cantidad 
+                                    th(class="table-cell") Precio 
+                            tbody(class="table-body-group")
+                                - for(var i = 0; i < size; i++){
+                                    tr(class="table-row") 
+                                        th(class="table-cell") #{data[i].Nombre_flor}
+                                        th(class="table-cell") #{data[i].Cantidad}
+                                        th(class="table-cell precio") #{data[i].Precio}
+                                - } 
+                    div(class="flex justify-center total p-1 mt-2 text-3xl text-center") 
+                        h2 Total:
+                        span(id="totalCompra")
+                div(class="grid grid-cols-2 text-2xl h-16 text-center md:rounded-lg mt-6")
+                        button(class="btn bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-4" id="Rechazar") Rechazar
+                        button(class="btn bg-green-500 hover:bg-green-700 text-white font-bold py-2 justify-end px-4 rounded ml-4" id="Aceptar") Aceptar
+    script(src="/js/compras.js") 

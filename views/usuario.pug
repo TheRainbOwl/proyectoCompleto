@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Flor^3
+        link(rel="shortcut icon", href="/logos/flor.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/usuario.css")
+        link(href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet")
+    body
+        div(class="container flex justify-center md:mt-16")
+            div(class="container-user flex flex-col md:w-96 md:rounded-lg shadow-2xl")
+                div(class="flex justify-center p-5")
+                    img(src="/logos/flor.png", alt="Logo de la flor con texto.")
+                div(class="flex flex-col justify-center pl-5 pr-5")
+                    form(action="/inicio-sesion", method="post") 
+                        div(class="mb-5")
+                            label(class="text-white block text-white text-md font-bold mb-2" for="usuario") Usuario
+                            input(type="text" name="usuario" placeholder="Usuario" class="p-3 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500 " required autocomplete="off")
+                        div(class="mb-3")
+                            label(class="text-white block text-white text-md font-bold mb-2" for="contrasenia") Contraseña
+                            input(type="password" name="contrasenia" placeholder="Contraseña" class="p-3 mb-2 p-3 mb-2 bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500 " required autocomplete="off")
+                        div(class="flex items-center justify-around mb-4")
+                            button(type="submit" class="text-white bg-blue-600 hover:bg-blue-900 py-2 px-4 rounded mt-3 mb-6") Iniciar Sesión
+                            button(type="reset" class="text-white bg-red-600 hover:bg-red-900 py-2 px-4 rounded mt-3 mb-6") Eliminar 

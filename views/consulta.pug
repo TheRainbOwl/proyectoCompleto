@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Flor^3
+        link(rel="shortcut icon", href="/logos/flor.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/consulta.css")
+        link(href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet")
+    body 
+        div(class="general")
+            section(id="content")
+                aside 
+                    - var id_User = idUser + ".jpg"
+                    img(src="images/" + id_User, alt="Foto del usuario" class="mx-auto foto_usuario")
+                    div(class="info_usuario")
+                        h1 #{nombreUser}
+                    img(src="/images/fflor.png" class="mx-auto publicidad" alt="publicidad engañosa")
+                    a(href="/historial")
+                        button(class="text-white bg-green-900 hover:bg-green-700 py-2 px-4 rounded mb-10 historial") HISTORIAL 
+                    br
+                    a(href="/compras")
+                        button(class="text-white bg-green-900 hover:bg-green-700 py-2 px-4 rounded mb-10 historial") COMPRAS  
+                    a(href="/")
+                        button(class="cerrar bg-red-900 hover:bg-red-700 rounded") CERRAR SESION 
+            section(id="consulta")
+                img(src="/logos/flor.png" class="mx-auto logo" alt="logo")
+                p(class="seleccion")
+                    strong Selecciona la temporada
+                form(action="/temporada-selector", class="form-temporada" method="post") 
+                    select(name="temporada")
+                        option(value="Primavera" selected) PRIMAVERA 
+                        option(value="Verano") VERANO
+                        option(value="Otonio") OTOÑO
+                        option(value="Invierno") INVIERNO
+                    br
+                    button(type="submit" class="text-white bg-green-900 hover:bg-green-700 py-2 px-4 rounded mb-10 CONSULTAR") CONSULTAR

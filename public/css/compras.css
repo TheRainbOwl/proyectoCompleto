@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #119DA4;
+    background-image: url("/images/fondo.png");
+    background-size: 25%;
+    width: auto;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+}
+
+.principal{
+    width: 600px;
+    background-color: #0D6F76;
+    display: grid;
+}
+
+
+.total_compra{
+    display: flex;
+    justify-content: center;
+    color: #e2e2e2;
+    background-color: #119DA4;
+    text-shadow: 0 3px 3px #095558;
+}
+
+.container-table{
+    background-color: #119DA4;
+    color: #e2e2e2;
+}
+
+.total{
+    text-shadow: 0 3px 3px #095558;
+}

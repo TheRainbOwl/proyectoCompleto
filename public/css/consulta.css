@@ -1,0 +1,114 @@
+
+
+body{
+    margin:0px;
+    background-color: #119DA4;
+    background-image: url("/images/fondo.png");
+    background-size: 25%;
+    width: auto;
+}
+
+aside{
+    background-color: #0E5558;  
+    width: 100%x;
+    height: auto;
+    text-align: center;
+    border-radius: 20px;
+    float: center;
+    padding: 30px;
+}
+
+#content{
+    float: left;
+    width: 20%;
+    margin-left: 30px;
+}
+
+#consulta{
+    margin-top: 10px;
+    margin-left: 450px;
+    background-color: #0E5558;  
+    height: auto;
+    color: white;
+    width: 40%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+img{
+    width: 180px;
+    padding: 10px;
+    height: 180px;
+}
+
+.logo{
+    width: 300px;
+    
+}
+
+.info_usuario{
+    display: grid;
+    background-color: #127275;
+    color:rgb(209, 209, 209);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.publicidad{
+    width: 200px;
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+.cerrar{
+    background-color: rgba(255, 0, 0, 0.685);
+    color: white;
+    padding: 8px;
+    width: 140px;
+}
+
+.historial{
+    padding: 8px;
+    width: 140px;
+}
+
+.general{
+    width: auto;
+}
+
+
+.CONSULTAR{
+    margin-top: 50PX;
+}
+
+label{
+    color:white;
+}
+
+select{
+    border: 3px solid black;
+    background-color: cadetblue;
+    color: black;
+}
+option{
+    color: black;
+    text-align: center;
+}
+.seleccion{
+    text-align: center;
+    background-color: rgb(50, 194, 139);
+    border: 2px soli black;
+    height: 30px;
+    color: black;
+}
+
+.foto_usuario{
+    border-radius: 360px;
+}
+
+
+.form-temporada{
+    margin-top: 20px;
+}

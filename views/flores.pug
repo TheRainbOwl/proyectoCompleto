@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Flor^3
+        link(rel="shortcut icon", href="/logos/flor.png", type="image/x-icon")
+        link(rel="stylesheet", href="/css/flores.css")
+        link(href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet")
+    body
+        div
+            div(class="p-8 text-8xl text-white text-center")
+                h1 Flores de Temporada 
+            - for(var i = 0; i < floresNum; i++){
+                div(class="flex flex-row justify-end ml-6 mt-4 mb-4 mr-6") 
+                    div(class="flex flex-row bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded")
+                        <svg class="h-10 w-10 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="9" cy="19" r="2" />  <circle cx="17" cy="19" r="2" />  <path d="M3 3h2l2 12a3 3 0 0 0 3 2h7a3 3 0 0 0 3 -2l1 -7h-15.2" /></svg>
+                        button(type="submit" class="comprar ml-2 text-2xl") Comprar  
+                div(class="container-flower ml-6 mt-4 mb-4 mr-6 grid grid-cols-10 gap-4 p-3 rounded-md shadow-2xl")
+                    div(class="md:col-span-2 flex items-center")
+                        - var image = floresData[i].ID_Flor + ".jpg"
+                        img(src="/images/" + image , alt="Girasol.jpg" class="rounded-md") 
+                    div(class="md:col-span-6 flex flex-col justify-center") 
+                        div(class="text-4xl text-white ml-3 text-flowers") 
+                            span #{floresData[i].Nombre}
+                        div(class="bg-blue-300 m-2 p-2 text-justify rounded-md") 
+                            p #{floresData[i].Descripcion}
+                    div(class="md:col-span-2 grid grid-cols-2 grid-rows-2 gap-2") 
+                        button(class="mas bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-3xl" id="mas") +
+                        button(class="menos bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded text-3xl" id="menos") -
+                        div(class="col-span-2 bg-blue-500 flex items-center justify-center rounded text-2xl text-white") 
+                            span Cantidad: 
+                            span(class="cantidad" id="cantidad") 0 
+            - } 
+        script(src="/js/flores.js") 

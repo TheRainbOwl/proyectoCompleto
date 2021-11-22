@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #119DA4;
+    background-image: url("/images/fondo.png");
+    background-size: 25%;
+    width: auto;
+}
+
+h1{
+    text-shadow: 2px 2px 3px #09565a;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+}
+.text-flowers{
+    text-shadow: 2px 2px 3px #09565a;
+}
+
+.container-flower{
+    background-color: #0b6166;
+}

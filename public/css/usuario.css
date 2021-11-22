@@ -1,0 +1,14 @@
+body{
+    background-color: #119DA4;
+    background-image: url("/images/fondo.png") ;
+    background-size: 25%;
+}
+
+
+img{
+    width: 270px;
+}
+
+.container-user{
+    background-color: #0E5558;
+}
